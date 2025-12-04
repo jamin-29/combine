@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffe6f2, #ffe9d6, #fff2e6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeDown 1.2s ease-out forwards;
+      opacity: 0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #d14b8f; /* Pink accent */
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #6e3d2e; /* Brown text */
+    }
+
+    /* Cards container */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    /* Card style */
+    .card {
+      background: linear-gradient(145deg, #ffd1dc, #ffe4c4, #ffdab3);
+      border-radius: 15px;
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: cardFadeUp 1s ease forwards;
+    }
+
+    /* Stagger animation */
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+
+    /* Hover effect */
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image inside cards */
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* Title */
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+      color: #c0392b; /* Red */
+    }
+
+    /* URL text */
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      color: #6e3d2e; /* Brown */
+      word-wrap: break-word;
+    }
+
+    /* Open button */
+    .card a {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #ff6b6b, #ff9f43); /* Red to Orange gradient */
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .card a:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* Keyframes */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes cardFadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>The App Riders Guild</h1>
+    <p>Quick access to Our Web Apps</p>
+  </header>
+
+  <div class="cards-container">
+
+    <div class="card">
+      <img src="bite.jpg" alt="Lacson Catering">
+      <h3>Bite and Brew Cafe</h3>
+      <p>https://biteandbrewcafe.infinityfreeapp.com</p>
+      <a href="https://biteandbrewcafe.infinityfreeapp.com" target="_blank">Open</a>
+    </div>
+
+    <div class="card">
+      <img src="sip.jpg" alt="Bake Story">
+      <h3>Slice and Sip</h3>
+      <p>https://sliceandsip.infinityfreeapp.com</p>
+      <a href="https://sliceandsip.infinityfreeapp.com" target="_blank">Open</a>
+    </div>
+
+    <div class="card">
+      <img src="boba.jpg" alt="Birthday Services">
+      <h3>Boba Bliss</h3>
+      <p>https://bobabliss.infinityfreeapp.com</p>
+      <a href="https://bobabliss.infinityfreeapp.com" target="_blank">Open</a>
+    </div>
+
+    <div class="card">
+      <img src="chibog.jpg" alt="Learn Hub">
+      <h3>Chibog Express</h3>
+      <p>https://chibogexpress.infinityfreeapp.com</p>
+      <a href="https://chibogexpress.infinityfreeapp.com" target="_blank">Open</a>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
